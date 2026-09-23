@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fffaf5;
+}
+
+/* Navigation */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #3b2115;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #f5c58b;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #f5c58b;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(rgba(45, 24, 15, 0.65), rgba(45, 24, 15, 0.65)),
+        url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 30px;
+}
+
+.small-title {
+    color: #f5c58b;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    margin: 5px;
+    background: #c87941;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #a85e2e;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #3b2115;
+}
+
+
+/* Common Section */
+
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: #c87941;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #3b2115;
+    margin-top: 8px;
+}
+
+
+/* About */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-text h3 {
+    color: #3b2115;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+.text-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #a85e2e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* Menu */
+
+.menu-section {
+    max-width: none;
+    background: #f4e7d8;
+}
+
+.menu-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+
+.menu-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    color: #3b2115;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.menu-card span {
+    color: #c87941;
+    font-weight: bold;
+}
+
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Reviews */
+
+.reviews-section {
+    max-width: none;
+    background: #f4e7d8;
+}
+
+.review-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.stars {
+    color: #d68a35;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.review-card h4 {
+    color: #3b2115;
+}
+
+
+/* Contact */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.contact-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    color: #3b2115;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    margin-bottom: 12px;
+}
+
+.phone-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+    background: #c87941;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background: #3b2115;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    color: #f5c58b;
+    margin-bottom: 8px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.social-links a:hover {
+    color: #f5c58b;
+}
+
+footer hr {
+    max-width: 700px;
+    margin: 20px auto;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.demo-note {
+    font-size: 13px;
+    color: #ddd;
+    max-width: 700px;
+    margin: auto;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 800px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #3b2115;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 5%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+}
